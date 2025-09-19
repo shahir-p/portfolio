@@ -1,0 +1,186 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Definition of the design system. All colors, gradients, fonts, etc should be defined here. 
+All colors MUST be HSL.
+*/
+
+@layer base {
+  :root {
+    --background: 0 0% 100%;
+    --foreground: 220 14% 10%;
+
+    --card: 0 0% 100%;
+    --card-foreground: 220 14% 10%;
+
+    --popover: 0 0% 100%;
+    --popover-foreground: 220 14% 10%;
+
+    --primary: 200 98% 39%;
+    --primary-foreground: 0 0% 100%;
+
+    --secondary: 220 14% 96%;
+    --secondary-foreground: 220 14% 10%;
+
+    --muted: 220 14% 96%;
+    --muted-foreground: 220 8% 46%;
+
+    --accent: 200 95% 95%;
+    --accent-foreground: 200 98% 39%;
+
+    --success: 142 76% 36%;
+    --success-foreground: 0 0% 100%;
+
+    --destructive: 0 84% 60%;
+    --destructive-foreground: 0 0% 100%;
+
+    --border: 220 13% 91%;
+    --input: 220 13% 91%;
+    --ring: 200 98% 39%;
+
+    --radius: 12px;
+
+    /* Portfolio specific colors */
+    --hero-bg: 220 20% 98%;
+    --tech-stack-bg: 220 14% 96%;
+    --project-card-shadow: 220 14% 10% / 0.08;
+    --gradient-primary: linear-gradient(135deg, hsl(200 98% 39%), hsl(190 92% 45%));
+    --gradient-hero: linear-gradient(135deg, hsl(220 20% 98%), hsl(210 25% 95%));
+    --gradient-card: linear-gradient(135deg, hsl(0 0% 100%), hsl(220 14% 98%));
+    
+    /* Shadows */
+    --shadow-soft: 0 4px 24px -4px hsl(220 14% 10% / 0.08);
+    --shadow-medium: 0 8px 32px -8px hsl(220 14% 10% / 0.12);
+    --shadow-strong: 0 16px 48px -16px hsl(220 14% 10% / 0.16);
+    
+    /* Animations */
+    --transition-smooth: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    --transition-bounce: all 0.4s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+
+    --sidebar-background: 0 0% 98%;
+
+    --sidebar-foreground: 240 5.3% 26.1%;
+
+    --sidebar-primary: 240 5.9% 10%;
+
+    --sidebar-primary-foreground: 0 0% 98%;
+
+    --sidebar-accent: 240 4.8% 95.9%;
+
+    --sidebar-accent-foreground: 240 5.9% 10%;
+
+    --sidebar-border: 220 13% 91%;
+
+    --sidebar-ring: 217.2 91.2% 59.8%;
+  }
+
+  .dark {
+    --background: 220 27% 6%;
+    --foreground: 220 14% 96%;
+
+    --card: 220 27% 8%;
+    --card-foreground: 220 14% 96%;
+
+    --popover: 220 27% 8%;
+    --popover-foreground: 220 14% 96%;
+
+    --primary: 200 98% 45%;
+    --primary-foreground: 220 27% 6%;
+
+    --secondary: 220 20% 14%;
+    --secondary-foreground: 220 14% 96%;
+
+    --muted: 220 20% 14%;
+    --muted-foreground: 220 8% 65%;
+
+    --accent: 220 20% 14%;
+    --accent-foreground: 200 98% 45%;
+
+    --success: 142 76% 42%;
+    --success-foreground: 220 27% 6%;
+
+    --destructive: 0 75% 55%;
+    --destructive-foreground: 220 27% 6%;
+
+    --border: 220 20% 14%;
+    --input: 220 20% 14%;
+    --ring: 200 98% 45%;
+
+    /* Portfolio specific colors - dark mode */
+    --hero-bg: 220 27% 8%;
+    --tech-stack-bg: 220 20% 14%;
+    --project-card-shadow: 0 0 0 / 0.3;
+    --gradient-primary: linear-gradient(135deg, hsl(200 98% 45%), hsl(190 92% 50%));
+    --gradient-hero: linear-gradient(135deg, hsl(220 27% 8%), hsl(220 20% 14%));
+    --gradient-card: linear-gradient(135deg, hsl(220 27% 8%), hsl(220 20% 12%));
+    --sidebar-background: 240 5.9% 10%;
+    --sidebar-foreground: 240 4.8% 95.9%;
+    --sidebar-primary: 224.3 76.3% 48%;
+    --sidebar-primary-foreground: 0 0% 100%;
+    --sidebar-accent: 240 3.7% 15.9%;
+    --sidebar-accent-foreground: 240 4.8% 95.9%;
+    --sidebar-border: 240 3.7% 15.9%;
+    --sidebar-ring: 217.2 91.2% 59.8%;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+
+  body {
+    @apply bg-background text-foreground font-sans antialiased;
+  }
+
+  html {
+    scroll-behavior: smooth;
+  }
+}
+
+@layer components {
+  .hero-section {
+    background: var(--gradient-hero);
+  }
+  
+  .card-gradient {
+    background: var(--gradient-card);
+  }
+  
+  .shadow-soft {
+    box-shadow: var(--shadow-soft);
+  }
+  
+  .shadow-medium {
+    box-shadow: var(--shadow-medium);
+  }
+  
+  .shadow-strong {
+    box-shadow: var(--shadow-strong);
+  }
+  
+  .transition-smooth {
+    transition: var(--transition-smooth);
+  }
+  
+  .transition-bounce {
+    transition: var(--transition-bounce);
+  }
+  
+  .btn-primary {
+    @apply bg-primary text-primary-foreground hover:bg-primary/90 px-8 py-3 rounded-xl font-semibold transition-smooth shadow-medium;
+  }
+  
+  .btn-secondary {
+    @apply bg-transparent border-2 border-primary text-primary hover:bg-primary hover:text-primary-foreground px-8 py-3 rounded-xl font-semibold transition-smooth;
+  }
+  
+  .section-padding {
+    @apply py-20 px-6;
+  }
+  
+  .container-custom {
+    @apply max-w-7xl mx-auto;
+  }
+}
