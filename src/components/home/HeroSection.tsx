@@ -1,5 +1,5 @@
 import { Button } from "@/components/ui/button";
-import { ArrowDown, ArrowRight, Github, Linkedin, Mail } from "lucide-react";
+import { ArrowDown, ArrowRight, Download, Github, Linkedin, Mail } from "lucide-react";
 import { Link } from "react-router-dom";
 import heroImage from "@/assets/developer-hero.jpg";
 
@@ -35,7 +35,7 @@ const HeroSection = () => {
               <Button asChild className="btn-secondary">
                 <a href="/src/assets/Muhammad Shahir p CV.pdf" download>
                   Download CV
-                  <ArrowDown className="ml-2 h-4 w-4 group-hover:translate-x-1 transition-transform" />
+                  <Download className="ml-2 h-4 w-4 group-hover:translate-x-1 transition-transform" />
                 </a>
               </Button>
             </div>

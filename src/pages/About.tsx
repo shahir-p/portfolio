@@ -6,94 +6,85 @@ import heroImage from "@/assets/developer-hero.jpg";
 const About = () => {
   const experiences = [
     {
-      year: "2022-2024",
-      company: "TechCorp Solutions",
-      position: "Senior Full Stack Developer",
-      location: "San Francisco, CA",
-      description: "Led development of enterprise web applications using React, Node.js, and cloud technologies. Managed a team of 4 developers and improved system performance by 40%.",
-      skills: ["React", "Node.js", "AWS", "TypeScript", "PostgreSQL"],
+      year: "2024-2025",
+      company: "Flapyid Pvt Ltd",
+      position: "Software Developer",
+      location: "Malappuram, Kerala",
+      description: "Worked on frontend and backend development, creating APIs and building web and cross-platform mobile applications. Took a short break to attend a full-stack development course/internship at Luminar Technolab and then returned to contribute further at Flapyid.",
+      skills: ["Flutter", "React", "Node.js", "MongoDB", "Express", "Bootstrap", "Tailwind CSS"]
     },
     {
-      year: "2020-2022",
-      company: "StartupXYZ",
-      position: "Full Stack Developer",
-      location: "Austin, TX",
-      description: "Developed and maintained multiple client projects from concept to deployment. Specialized in modern web technologies and API development.",
-      skills: ["JavaScript", "Python", "MongoDB", "Docker", "Vue.js"],
+      year: "2024",
+      company: "Luminar Technolab",
+      position: "Full Stack Developer Intern (Course)",
+      location: "Hybrid",
+      description: "Attended a full-stack development course while interning. Built responsive frontend interfaces and backend APIs using the MERN stack, gaining hands-on experience with real-world projects.",
+      skills: ["MongoDB", "Express", "React", "Node.js", "Bootstrap", "Tailwind CSS"]
     },
     {
-      year: "2019-2020",
-      company: "Digital Agency Inc",
+      year: "2023-2024",
+      company: "Freelance",
       position: "Frontend Developer",
       location: "Remote",
-      description: "Created responsive web applications and optimized user experiences for various clients. Collaborated with design teams to implement pixel-perfect interfaces.",
-      skills: ["HTML", "CSS", "JavaScript", "React", "Sass"],
-    },
+      description: "Built static websites and frontend applications using Flutter and web technologies. Delivered responsive and visually appealing interfaces for various clients.",
+      skills: ["Flutter", "HTML", "CSS", "JavaScript", "Bootstrap"]
+    }
+
   ];
 
   const education = [
     {
-      year: "2015-2019",
-      institution: "University of Technology",
+      year: "2021-2024",
+      institution: "Calicut University",
       degree: "Bachelor of Science in Computer Science",
-      location: "San Francisco, CA",
-      description: "Graduated with honors. Focused on software engineering, algorithms, and web development. Active member of the programming club and hackathon organizer.",
-      achievements: ["Dean's List", "Best Final Project Award", "Programming Club President"],
+      location: "Kerala, India",
+      description: "Studied Computer Science and built a running Flutter project during the course.",
+      achievements: ["Completed personal web/mobile projects"]
     },
     {
-      year: "2018",
-      institution: "Google Developer Challenge",
-      degree: "Full Stack Web Development Certificate",
-      location: "Online",
-      description: "Comprehensive program covering modern web development technologies, best practices, and project-based learning.",
-      achievements: ["Top 10% Graduate", "Capstone Project Recognition"],
-    },
+      year: "2024",
+      institution: "Luminar Technolab",
+      degree: "Full Stack Web Development Course",
+      location: "Hybrid ",
+      description: "Attended an intensive full-stack development course, learning the MERN stack and modern frontend/backend practices. Applied skills on real-world projects and assignments.",
+      achievements: ["Built projects with MongoDB, Express, React, Node.js", "Gained hands-on full-stack experience"]
+    }
   ];
 
+
   const skills = [
-    { category: "Frontend", items: ["React", "TypeScript", "Next.js", "Vue.js", "Tailwind CSS"] },
-    { category: "Backend", items: ["Node.js", "Python", "Express", "GraphQL", "REST APIs"] },
-    { category: "Database", items: ["PostgreSQL", "MongoDB", "Redis", "Prisma", "Supabase"] },
-    { category: "DevOps", items: ["AWS", "Docker", "CI/CD", "Vercel", "GitHub Actions"] },
-    { category: "Tools", items: ["Git", "VSCode", "Figma", "Postman", "Linear"] },
+    { category: "Frontend", items: ["React", "JavaScript", "Flutter", "Tailwind CSS", "Bootstrap", "TypeScript (Basic)", "Next.js (Basic)"] },
+    { category: "Backend", items: ["Node.js", "Express", "REST APIs"] },
+    { category: "Database", items: ["MongoDB", "Firebase"] },
+    { category: "DevOps", items: ["GitHub Actions", "Vercel", "Firebase"] },
+    { category: "Tools", items: ["Git", "VSCode", "Figma", "Postman",] },
   ];
 
   return (
     <div className="pt-16">
       {/* Hero Section */}
-      <section className="section-padding bg-secondary/30">
+      <section className="section-padding bg-white">
         <div className="container-custom">
           <div className="grid lg:grid-cols-2 gap-12 items-center">
             <div className="space-y-6">
               <div className="space-y-4">
                 <h1 className="text-5xl font-bold text-foreground">About Me</h1>
                 <p className="text-xl text-muted-foreground leading-relaxed">
-                  I'm a passionate software developer with 5+ years of experience creating 
-                  innovative digital solutions. I love turning complex problems into simple, 
-                  beautiful, and intuitive designs.
+                  I'm a <span className="font-semibold">software developer</span> with 1 year of experience in the
+                  <span className="font-semibold"> MERN stack</span> and self-taught <span className="font-semibold">Flutter</span>.
+                  I enjoy learning new technologies and building user-friendly digital solutions.
                 </p>
+
               </div>
-              
-              <div className="grid grid-cols-2 gap-6">
-                <div className="space-y-2">
-                  <div className="flex items-center gap-2 text-muted-foreground">
-                    <MapPin className="h-4 w-4" />
-                    <span>San Francisco, CA</span>
-                  </div>
-                  <div className="flex items-center gap-2 text-muted-foreground">
-                    <Calendar className="h-4 w-4" />
-                    <span>Available for projects</span>
-                  </div>
-                </div>
-                <div className="space-y-2">
-                  <div className="text-2xl font-bold text-primary">50+</div>
-                  <div className="text-muted-foreground">Projects Completed</div>
-                </div>
-              </div>
+
+
+
 
               <Button className="btn-primary">
                 <Download className="mr-2 h-4 w-4" />
-                Download Resume
+                <a href="/src/assets/Muhammad Shahir p CV.pdf" download>
+                  Download CV
+                </a>
               </Button>
             </div>
 
@@ -153,7 +144,7 @@ const About = () => {
                 <div className="grid lg:grid-cols-4 gap-6">
                   <div className="space-y-2">
                     <div className="flex items-center gap-2 text-primary font-semibold">
-                      <Briefcase className="h-4 w-4" />
+                      <Calendar className="h-4 w-4" />
                       <span>{exp.year}</span>
                     </div>
                     <div className="flex items-center gap-2 text-muted-foreground">
@@ -161,14 +152,14 @@ const About = () => {
                       <span>{exp.location}</span>
                     </div>
                   </div>
-                  
+
                   <div className="lg:col-span-3 space-y-4">
                     <div className="space-y-2">
                       <h3 className="text-xl font-semibold text-foreground">{exp.position}</h3>
                       <p className="text-primary font-medium">{exp.company}</p>
                       <p className="text-muted-foreground">{exp.description}</p>
                     </div>
-                    
+
                     <div className="flex flex-wrap gap-2">
                       {exp.skills.map((skill, skillIndex) => (
                         <span
@@ -211,14 +202,14 @@ const About = () => {
                       <span>{edu.location}</span>
                     </div>
                   </div>
-                  
+
                   <div className="lg:col-span-3 space-y-4">
                     <div className="space-y-2">
                       <h3 className="text-xl font-semibold text-foreground">{edu.degree}</h3>
                       <p className="text-primary font-medium">{edu.institution}</p>
                       <p className="text-muted-foreground">{edu.description}</p>
                     </div>
-                    
+
                     <div className="flex flex-wrap gap-2">
                       {edu.achievements.map((achievement, achievementIndex) => (
                         <span
@@ -237,18 +228,7 @@ const About = () => {
         </div>
       </section>
 
-      {/* CTA Section */}
-      <section className="section-padding bg-secondary/30">
-        <div className="container-custom text-center space-y-6">
-          <h2 className="text-4xl font-bold text-foreground">Let's Work Together</h2>
-          <p className="text-xl text-muted-foreground max-w-2xl mx-auto">
-            Ready to start your next project? I'd love to hear about your ideas and help bring them to life.
-          </p>
-          <Button asChild className="btn-primary">
-            <Link to="/contact">Get In Touch</Link>
-          </Button>
-        </div>
-      </section>
+
     </div>
   );
 };

@@ -1,6 +1,6 @@
 import { Button } from "@/components/ui/button";
 import { ExternalLink, Github, Filter } from "lucide-react";
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import acerwala from "../assets/acerwala.png";
 import tripeloo from "../assets/tripeloo.png";
 import visionmap from "../assets/visionmap.png";
@@ -67,13 +67,16 @@ const Projects = () => {
       description: "College project built with Flutter and Firebase for Alrida Fried Chicken. The app includes modules for users, admins, and delivery boys with features like order management, real-time updates, and notifications.",
       image: alrida,
       category: "Cross-Platform",
-      tags: ["Flutter", "Firebase", ],
+      tags: ["Flutter", "Firebase",],
       github: "https://github.com",
       live: "https://example.com",
       year: "2024",
     }
 
   ];
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, []);
 
   const filteredProjects = selectedCategory === "All"
     ? projects
