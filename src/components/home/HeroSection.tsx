@@ -74,7 +74,7 @@ const HeroSection = () => {
             <div className="relative z-10">
               <img
                 src={heroImage}
-                alt="Alex Morgan - Software Developer"
+                alt="Muhammad Shahir - Software Developer"
                 className="w-full max-w-md mx-auto rounded-2xl shadow-strong"
               />
             </div>

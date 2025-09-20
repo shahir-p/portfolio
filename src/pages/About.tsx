@@ -91,7 +91,7 @@ const About = () => {
             <div className="relative">
               <img
                 src={heroImage}
-                alt="Alex Morgan - About"
+                alt="Muhammad Shahir - About"
                 className="w-full max-w-md mx-auto rounded-2xl shadow-strong"
               />
               <div className="absolute -top-4 -right-4 w-72 h-72 bg-primary/10 rounded-full blur-3xl -z-10"></div>
